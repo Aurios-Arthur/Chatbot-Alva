@@ -8,7 +8,7 @@ let userMessage;
 const API_KEY = ""
 
 const createChatLi = (message, className) => {
-    //Create a chat <li> element with passed message and className
+    
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
     let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<span class="material-symbols-outlined">smart_toy</span><p>${message}</p>`;
@@ -42,7 +42,6 @@ const handleChat = () => {
     userMessage = chatInput.value.trim();
     if(!userMessage)return;
 
-    //Append the user's message to te chatbox
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
