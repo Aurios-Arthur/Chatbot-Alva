@@ -69,3 +69,4 @@ chatbotTogller.addEventListener("click", () => document.body.classList.toggle("s
 
 // Envia a mensagem ao clicar no botão de envio
 sendChatBtn.addEventListener("click", handleChat);
+
