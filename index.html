@@ -10,6 +10,53 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
+    <header class="header">
+        <div class="logo">ALVA</div>
+        <nav>
+            <ul class="nav-links">
+                <li> <a href="#anxiety" onclick="return false">Controle de Ansiedade</a></li>
+                <li> <a href="#meditation" onclick="return false">Meditação Guiada</a></li>
+                <li> <a href="#motivation" onclick="return false">Mensagens de Motivação</a></li>
+                <li> <a href="#help" onclick="return false">Ajuda Imediata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Bem-Vindo ao ALVA Chatbot</h1>
+            <p>Seu assistente virtual pronto para ajudar</p>
+        </section>
+
+        <section class="help-section">
+            <div class="help-content">
+                <h2>Precisa de Ajuda?</h2>
+                <p>Se você está passando por algum momento difícil, estamos aqui para ajudar.</p>
+                <div class="help-numbers">
+                    <div class="phone-number">
+                        <strong>CVV</strong>
+                        <p>Apoio emocional 24h</p>
+                        <p><strong>Telefone:</strong> 188</p>
+                    </div>
+                    <div class="phone-number">
+                        <strong>Polícia</strong>
+                        <p>Emergências</p>
+                        <p><strong>Telefone:</strong> 190</p>
+                    </div>
+                    <div class="phone-number">
+                        <strong>Bombeiros</strong>
+                        <p>Emergências</p>
+                        <p><strong>Telefone:</strong> 193</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p> &copy; 2025 Unifasar</p>
+    </footer>
+
     <button class="chatbot-toggler">
         <span class="material-symbols-outlined">mode_comment</span>
         <span class="material-symbols-outlined">close</span>
@@ -22,14 +69,14 @@
         <ul class="chatbox">
             <li class="chat incoming">
                 <span class="material-symbols-outlined">smart_toy</span>
-                <p>Olá! 😊 <br> Como eu posso te ajudar hoje? </p>
+                <p>Olá! 😊 <br>Como eu posso te ajudar hoje? </p>
             </li>
         </ul>
+        
         <div class="chat-input">
             <textarea placeholder="Insira uma menssagem..." required></textarea>
             <span id="send-btn" class="material-symbols-outlined">send</span>
         </div>
     </div>
-    
 </body>
 </html>
