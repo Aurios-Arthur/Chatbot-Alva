@@ -47,7 +47,7 @@ const generateResponse = (incomingChatLi) => {
         .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight)); // Rolagem automática para a última mensagem
 }
 
-// Função para processar a mensagem do usuário e gerar a resposta do chatbot
+// Função para processar a mensagem do usuário e gerar a resposta do chatbot 
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // Obtém o texto digitado e remove espaços extras
     if (!userMessage) return; // Se estiver vazio, não faz nada
