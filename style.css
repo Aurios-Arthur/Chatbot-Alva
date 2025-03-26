@@ -1,15 +1,161 @@
-/* Fonte do google - Poppins */
+/* Importa a fonte Poppins do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Estilização padrão */
 *{
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Define a fonte padrão */
 }
 
+/* Define a cor de fundo do corpo da página */
 body {
     background: #E3F2FD;
 }
+
+/* Estilo para o Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o logo "ALVA" */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Estilo para o Menu de Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para os itens do menu de navegação */
+.nav-links li {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo para os itens do menu de navegação quando estão em "hover" */
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para a âncora de link do menu de navegação */
+.nav-links a {
+    text-decoration: none;
+    font-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Estilo para a âncora de link do menu de navegação quando estão em "hover" */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+/* Estilo para a Main */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para o título da Main */
+.intro h1 {
+    font-size: 28px;
+    color: #222;
+}
+
+/* Estilo para o parágrafo da Main */
+.intro p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilo para Seção de Ajuda */
+.help-section {
+    padding: 60px 20px;
+    color: #222;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo para a div com o título e subtítulo da Seção de Ajuda */
+.help-content {
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Estilo para o título da Seção de Ajuda */
+.help-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o subtítulo da Seção de Ajuda */
+.help-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para toda a linha de telefones de contato da Seção de Ajuda */
+.help-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para os cards de telefone da Seção de Ajuda */
+.phone-number {
+    background-color: #724ae8;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 250px;
+}
+
+/* Estilo para o texto dos cards de telefone da Seção de Ajuda */
+.phone-number p {
+    margin: 5px 0;
+}
+
+.phone-number strong {
+    font-weight: bold;
+}
+
+/* Estilo para o Footer */
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #222;
+    opacity: 0.5;
+    color: white;
+    font-size: 14px;
+}
+
+/* Botão para abrir/fechar o chatbot */
 .chatbot-toggler {
     position: fixed;
     right: 40px;
@@ -24,23 +170,32 @@ body {
     cursor: pointer;
     color: #fff;
     background: #724ae8;
-    border-radius: 50%;
-    transition: all 0.2 ease;
+    border-radius: 50%; /* Formato circular */
+    transition: all 0.2s ease;
 }
+
+/* Rotaciona o botão ao abrir o chatbot */
 .show-chatbot .chatbot-toggler{
     transform: rotate(90deg);
 }
+
+/* Ícones dentro do botão do chatbot */
 .chatbot-toggler span {
     position: absolute;
 }
+
+/* Oculta o ícone de abrir quando o chatbot está aberto */
 .show-chatbot .chatbot-toggler span:first-child,
 .chatbot-toggler span:last-child{
     opacity: 0;
 }
+
+/* Exibe o ícone de fechar quando o chatbot está aberto */
 .show-chatbot .chatbot-toggler span:last-child{ 
     opacity: 1;
 }
 
+/* Estilos do contêiner do chatbot */
 .chatbot {
     position: fixed;
     right: 40px;
@@ -48,49 +203,61 @@ body {
     width: 420px;
     transform: scale(0.5);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; /* Impede interação quando fechado */
     overflow: hidden;
     background: #fff;
     border-radius: 15px;
-    transform-origin: bottom right ;
+    transform-origin: bottom right;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
                 0 32px 64px -48px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease;
 }
+
+/* Exibe o chatbot quando ativo */
 .show-chatbot .chatbot {
     transform: scale(1);
     opacity: 1;
     pointer-events: auto;
 }
 
-.chatbot header{
+/* Cabeçalho do chatbot */
+.chatbot header {
     background: #724ae8;
     padding: 16px 0;
     text-align: center;
     position: relative;
 }
-.chatbot header h2{
+
+/* Título do chatbot */
+.chatbot header h2 {
     color: #fff;
     font-size: 1.4rem;
 }
-.chatbot header span{
+
+/* Ícone de fechar dentro do cabeçalho */
+.chatbot header span {
     position: absolute;
     right: 20px;
-    top:50%;
+    top: 50%;
     color: #fff;
     cursor: pointer;
-    display: none;
+    display: none; /* Escondido por padrão */
     transform: translateY(-50%);
 }
-.chatbot .chatbox{
+
+/* Área de exibição das mensagens */
+.chatbot .chatbox {
     height: 510px;
     overflow-y: auto;
     padding: 30px 20px 100px;
 }
 
-.chatbox .chat{
+/* Estilização das mensagens */
+.chatbox .chat {
     display: flex;
 }
+
+/* Ícone do chatbot nas mensagens recebidas */
 .chatbox .incoming span {
     height: 32px;
     width: 32px;
@@ -102,25 +269,32 @@ body {
     border-radius: 4px;
     margin: 0 10px 7px 0;
 }
-.chatbox .outgoing{
+
+/* Alinhamento das mensagens enviadas */
+.chatbox .outgoing {
     margin: 20px 0;
     justify-content: flex-end;
 }
+
+/* Estilo das mensagens (tanto enviadas quanto recebidas) */
 .chatbox .chat p {
     color: #fff;
     max-width: 75%;
     white-space: pre-wrap;
     font-size: 0.95rem;
     padding: 12px 16px;
-    border-radius: 10px 10px 0 10px ;
+    border-radius: 10px 10px 0 10px;
     background: #724ae8;
 }
 
-.chatbox .incoming p{
+/* Estilo específico para mensagens recebidas */
+.chatbox .incoming p {
     color: #000;
     background: #f2f2f2;
     border-radius: 10px 10px 10px 0;
 }
+
+/* Área de entrada de mensagem */
 .chatbot .chat-input {
     position: absolute;
     bottom: 0;
@@ -131,6 +305,8 @@ body {
     padding: 5px 20px;
     border-top: 1px solid #ccc;
 }
+
+/* Campo de entrada de texto */
 .chat-input textarea {
     height: 55px;
     width: 100%;
@@ -141,20 +317,45 @@ body {
     padding: 16px 15px 16px 0;
 }
 
+/* Ícone de envio de mensagem */
 .chat-input span {
     align-self: flex-end;
-    height: 55px ;
+    height: 55px;
     line-height: 55px;
     color: #724ae8;
     font-size: 1.35rem;
     cursor: pointer;
-    visibility: hidden;
+    visibility: hidden; /* Escondido até que haja texto */
 }
-.chat-input textarea:valid ~ span{
+
+/* Exibe o botão de envio apenas quando há texto no campo */
+.chat-input textarea:valid ~ span {
     visibility: visible;
 }
 
+/* Estilos responsivos para telas menores (até 490px) */
 @media(max-width: 490px){
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .intro {
+        padding: 30px 15px;
+    }
+
+    .help-numbers {
+        flex-direction: column;
+    }
+
     .chatbot {
         right: 0;
         bottom: 0;
@@ -163,10 +364,11 @@ body {
         border-radius: 0;
     }
 
-    .chatbot .chatbox{
+    .chatbot .chatbox {
         height: 90%;
     }
-    .chatbot header span{
-        display: block;
+
+    .chatbot header span {
+        display: block; /* Exibe o botão de fechar no cabeçalho */
     }
 }
