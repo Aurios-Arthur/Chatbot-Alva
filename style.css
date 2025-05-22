@@ -66,7 +66,7 @@ body {
 /* Estilo para a âncora de link do menu de navegação quando estão em "hover" */
 .nav-links a:hover {
     background: rgba(255, 255, 255, 0.2);
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 /* Estilo para a Main */
@@ -87,6 +87,168 @@ body {
 .intro p {
     font-size: 18px;
     margin-top: 10px;
+}
+
+/* Página de Ansiedade */
+.anxiety-section {
+    padding: 50px 20px;
+    background: #fff3e0;
+    color: #4e342e;
+    text-align: center;
+}
+
+.anxiety-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.anxiety-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Página de Meditação */
+.meditation-section {
+    padding: 50px 20px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.meditation-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.meditation-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Página de Motivação */
+.motivation-section {
+    padding: 50px 20px;
+    background: #e3f2fd;
+    color: #1565c0;
+    text-align: center;
+}
+
+.motivation-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.motivation-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Animação de fade para transição de páginas */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.full-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f0f4ff;
+    border-bottom: 1px solid #ccc;
+}
+
+.anxiety-section {
+    background: linear-gradient(135deg, #d8e4ff, #f0f4ff);
+}
+
+.meditation-section {
+    background: linear-gradient(135deg, #e5fbe5, #f0fff0);
+}
+
+.motivation-section {
+    background: linear-gradient(135deg, #fff2d8, #fffaf0);
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+.info-card h2 {
+    margin-bottom: 10px;
+    color: #724ae8;
+}
+
+.highlight-section {
+    background-color: #dbe5ff;
+    padding: 40px 20px;
+    text-align: center;
+    color: #222;
+}
+
+.content-box {
+    padding: 40px 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.content-box.light {
+    background: #f9f9f9;
+}
+
+.content-box h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.content-box ul {
+    list-style: disc inside;
+    line-height: 1.8;
+    color: #444;
+}
+
+.quote-box {
+    background: #fef7ea;
+    padding: 40px 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote-box blockquote {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.quote-box cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #888;
 }
 
 /* Estilo para Seção de Ajuda */
