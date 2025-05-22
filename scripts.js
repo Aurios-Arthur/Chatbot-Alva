@@ -5,7 +5,7 @@ const chatbox = document.querySelector(".chatbox"); // Área onde as mensagens a
 const chatbotTogller = document.querySelector(".chatbot-toggler"); // Botão para abrir/fechar o chatbot
 
 let userMessage; // Variável para armazenar a mensagem do usuário
-const API_KEY = ""; // Chave da API para requisições (precisa ser preenchida)
+const API_KEY = "AIzaSyDDFy3bKhKwUBMnv4XvZm1a42RPRnZv2XM"; // Chave da API para requisições (precisa ser preenchida)
 
 // Função para criar um elemento de mensagem (li) no chat
 const createChatLi = (message, className) => {
